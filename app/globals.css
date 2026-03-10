@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-black;
+  }
+
+  /* Remove default focus ring, use custom */
+  *:focus-visible {
+    outline: 1px solid #FF6F00;
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .nav-link {
+    @apply text-[11px] tracking-[0.15em] uppercase transition-colors duration-150;
+  }
+
+  .nav-link-active {
+    @apply text-accent;
+  }
+
+  .nav-link-hover {
+    @apply hover:text-accent;
+  }
+}
